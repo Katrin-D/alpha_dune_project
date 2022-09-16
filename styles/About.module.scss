@@ -1,0 +1,63 @@
+.about {
+  margin: 147px 0 109px;
+  position: relative;
+  @media (min-width: 769px) {
+    margin: 191px 0 180px;
+  }
+  @media (min-width: 1025px) {
+    margin: 215px 0 180px;
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 765px;
+    margin: 30px auto 0;
+    column-gap: 25px;
+    @media (min-width: 640px) {
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      margin-top: 90px;
+    }
+
+    .image {
+      position: relative;
+      width: 150px;
+      height: auto;
+      @media (min-width: 640px) {
+        width: 209px;
+        flex-shrink: 0;
+      }
+      @media (min-width: 769px) {
+        max-width: 209px;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 150%;
+        height: 150%;
+        top: -25%;
+        left: -25%;
+        z-index: -1;
+        background: radial-gradient(
+                        50% 50% at 50% 50%,
+                        rgba(157, 81, 255, 0.6) 0%,
+                        rgba(157, 81, 255, 0) 100%
+        );
+        filter: blur(50px);
+        backface-visibility: hidden; //for fixing blur blinking
+      }
+    }
+
+    .texts {
+      max-width: 451px;
+      margin-top: 30px;
+      @media (min-width: 640px) {
+        margin-top: 0;
+      }
+    }
+  }
+
+}

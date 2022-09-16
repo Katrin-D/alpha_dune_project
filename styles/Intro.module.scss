@@ -1,0 +1,72 @@
+.intro {
+  background-color: #000000;
+}
+.wrapper {
+  position: relative;
+  padding: 235px 0 72px;
+  /*margin-top: 57px;*/
+
+  @media (min-width: 541px) {
+    padding-top: 172px;
+  }
+
+  @media (min-width: 961px) {
+    padding: 172px 0;
+  }
+  @media (min-width: 1025px) {
+    padding-top: 225px;
+    /*margin-top: 75px;*/
+  }
+  @media (min-width: 1367px) {
+    padding: 307px 0 232px;
+  }
+
+  .intro_content {
+    position: relative;
+    z-index: 5;
+
+    h1 {
+      max-width: 285px;
+      text-align: left;
+      margin-bottom: 35px;
+
+      @media (min-width: 641px) {
+        max-width: 400px;
+        margin-bottom: 80px;
+      }
+      @media (min-width: 961px) {
+        max-width: 550px;
+      }
+
+    }
+  }
+
+  .animation {
+    width: 50%;
+    height: auto;
+    min-width: 200px;
+    max-width: 370px;
+    position: absolute;
+    top: 10%;
+    /*top: 37px;*/
+    right: 0;
+
+    @media (min-width: 961px) {
+     /* width: auto;*/
+      right: 0;
+    }
+    @media (min-width: 1025px) {
+      max-width: 450px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    @media (min-width: 1367px) {
+      max-width: 500px;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

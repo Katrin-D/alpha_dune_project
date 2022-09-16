@@ -1,0 +1,143 @@
+.ecosystem {
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  background: linear-gradient(
+        0deg,
+        #031324 29.05%,
+        rgba(3, 19, 36, 0.349136) 93.81%,
+        rgba(3, 19, 36, 0) 150.28%
+      )
+      bottom/100% 300px no-repeat,
+    url("../public/ecosystemBg_min.png") bottom no-repeat;
+
+  @media (min-width: 1920px) {
+    background-size: 100% 300px, contain;
+  }
+}
+
+.ecosystem_content {
+  position: relative;
+  padding: 71px 0 109px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @media (min-width: 540px) {
+    padding-top: 90px;
+  }
+  @media (min-width: 769px) {
+    align-items: flex-start;
+    padding: 122px 0 180px;
+  }
+
+  .title {
+    font-family: Arboria, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+    @media (min-width: 541px) {
+      font-size: 50px;
+    }
+  }
+
+  p {
+    max-width: 200px;
+    margin: 15px 0;
+    @media (min-width: 541px) {
+      max-width: 223px;
+    }
+  }
+
+  .animation {
+    height: auto;
+    transition: transform 1.5s ease-in-out;
+  }
+}
+
+.stater {
+  position: relative;
+  z-index: 5;
+  margin-bottom: 200px;
+  width: 100%;
+  @media (min-width: 769px) {
+    margin-bottom: 375px;
+  }
+  @media (min-width: 1201px) {
+    margin-bottom: 294px;
+  }
+
+  .animation {
+    position: absolute;
+    z-index: 0;
+    width: 265px;
+    top: 90px;
+    left: 25px;
+
+    @media (min-width: 541px) {
+      width: 312px;
+      left: 92px;
+    }
+    @media (min-width: 769px) {
+      width: 368px;
+      top: 0;
+      left: 175px;
+    }
+    @media (min-width: 961px) {
+      top: -45px;
+      width: 409px;
+    }
+    @media (min-width: 1367px) {
+      width: auto;
+
+    }
+  }
+}
+
+.houndrace {
+  margin-left: 0;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+
+  @media (min-width: 541px) {
+    margin-left: auto;
+    width: fit-content;
+  }
+
+  .animation {
+    position: relative;
+    z-index: -1;
+    width: 232px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    @media (min-width: 541px) {
+      width: 316px;
+    }
+    @media (min-width: 769px) {
+      margin-bottom: 11px;
+      position: absolute;
+      top: auto;
+      width: 396px;
+      left: -115%;
+    }
+    @media (min-width: 961px) {
+      width: 440px;
+      left: -128%;
+    }
+    @media (min-width: 1367px) {
+      width: auto;
+      left: -140%;
+    }
+  }
+}

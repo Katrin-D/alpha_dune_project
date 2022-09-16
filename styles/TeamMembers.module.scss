@@ -1,0 +1,47 @@
+.team_members {
+  margin: 147px 0 109px;
+  position: relative;
+  @media (min-width: 769px) {
+    margin: 191px 0 180px;
+  }
+  @media (min-width: 1025px) {
+    margin: 215px 0 180px;
+  }
+
+  .background {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    background: url("../public/teamBg-min.png") center/ cover no-repeat;
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    @media (min-width: 769px) {
+      margin-top: 65px;
+    }
+  }
+
+  @media (min-width: 1231px) {
+    .background {
+      background-size: 90%;
+    }
+    .content {
+      row-gap: 56px;
+      .card {
+        flex-basis: 25%;
+
+        & > * {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,195 @@
+@font-face {
+  font-family: "Arboria";
+  src: url("../public/fonts/Arboria-Bold.eot");
+  src: local("Arboria Bold"), local("Arboria-Bold"),
+    url("../public/fonts/Arboria-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/Arboria-Bold.woff") format("woff"),
+    url("../public/fonts/Arboria-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../public/fonts/Gilroy-Light.eot");
+  src: local("Gilroy Light"), local("Gilroy-Light"),
+    url("../public/fonts/Gilroy-Light.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/Gilroy-Light.woff") format("woff"),
+    url("../public/fonts/Gilroy-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../public/fonts/Gilroy-Regular.eot");
+  src: local("Gilroy Regular"), local("Gilroy-Regular"),
+    url("../public/fonts/Gilroy-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/Gilroy-Regular.woff") format("woff"),
+    url("../public/fonts/Gilroy-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../public/fonts/Gilroy-Bold.eot");
+  src: local("Gilroy Bold"), local("Gilroy-Bold"),
+    url("../public/fonts/Gilroy-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/Gilroy-Bold.woff") format("woff"),
+    url("../public/fonts/Gilroy-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  //perspective: 1px;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+
+  //for fixing blinking and hiding sections
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Gilroy, sans-serif;
+
+  background-color: #031324;
+  /*background: linear-gradient(180deg, #1e3144 0%, #031324 59.17%);*/
+  color: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+  font-size: 0;
+}
+
+.root {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+  max-width: 1570px;
+  margin: 0 auto;
+  padding: 0 26px;
+
+  @media (min-width: 769px) {
+    padding: 0 50px;
+  }
+  @media (min-width: 1025px) {
+    padding: 0 100px;
+  }
+}
+
+.lineTitle {
+  text-transform: uppercase;
+  font-family: "Gilroy", sans-serif;
+  font-size: 42px;
+  line-height: 1.2em;
+  font-weight: 300;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+
+  @media (min-width: 961px) {
+    font-size: 60px;
+  }
+
+  .lineAnim {
+    width: 100%;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 16px;
+      left: 0;
+      bottom: 8px;
+      z-index: -1;
+      background: linear-gradient(58.43deg, #9d51ff 32%, #04182c 96.5%);
+      animation: 2.5s ease-in-out 0s normal none running animation;
+    }
+    @keyframes animation {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.text, ul {
+  font-family: Gilroy, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.2em;
+  text-align: left;
+  &:not(:last-child) {
+    margin-bottom: 1.2em;
+  }
+
+  @media (min-width: 541px) {
+    font-size: 18px;
+  }
+
+  a {
+    color: #9d51ff;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.title_secondary {
+  font-family: Gilroy, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.2em;
+  text-align: left;
+  margin-bottom: 1.2em;
+
+  @media (min-width: 541px) {
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,85 @@
+.glow_button {
+  position: relative;
+  display: inline-block;
+  width: 147px;
+  height: 48px;
+  margin: 10px 0;
+  z-index: 5;
+
+  &:not(:last-child).glow_button {
+    margin-right: 14px;
+
+  }
+
+  &:hover .button {
+    background: rgba(157, 81, 255, 0.15);
+    border-color: white;
+  }
+
+  &:hover .white_button {
+    border-color: #9d51ff;
+    background: rgba(157, 81, 255, 0.15);
+  }
+}
+
+.glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 0;
+  z-index: -1;
+  width: 220px;
+  height: 150px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(157, 81, 255, 0.55) 0%,
+    rgba(157, 81, 255, 0) 100%
+  );
+  filter: blur(40px);
+  backface-visibility: hidden; //for fixing blur blinking
+  transition: all 0.4s linear;
+}
+
+.button,
+.white_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arboria, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  width: inherit;
+  height: inherit;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 12px;
+
+  transition: all 0.4s linear;
+}
+
+.button {
+  border-color: #9d51ff;
+}
+
+.white_button {
+  border-color: #ffffff;
+}
+
+@media (min-width: 541px) {
+  .glow_button {
+    width: 207px;
+    height: 67px;
+    &:not(:last-child).glow_button {
+      margin-right: 20px;
+    }
+
+    .button,
+    .white_button {
+      font-size: 18px;
+      border-radius: 20px;
+    }
+  }
+}

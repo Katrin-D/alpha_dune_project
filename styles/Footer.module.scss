@@ -1,0 +1,77 @@
+.footer {
+  position: relative;
+  text-align: center;
+  padding: 118px 0 44px;
+
+  @media (min-width: 769px) {
+    padding-top: 44px;
+  }
+
+  .logo,
+  .twitterLogo {
+    font-size: 0;
+    display: inline-block;
+  }
+
+  @media (max-width: 768px) {
+    .logo {
+      width: 181px;
+    }
+  }
+  .twitterLogo {
+    margin-left: 30px;
+  }
+
+  .twitterLink {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    justify-content: center;
+
+    @media (min-width: 861px) {
+      top: 50%;
+      left: auto;
+      right: 0;
+      transform: translateY(-50%);
+    }
+
+    a {
+      font-family: Arboria, sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.1s linear;
+      &:hover {
+        color: #9d51ff;
+      }
+    }
+
+    .twitterLogo {
+      position: relative;
+      z-index: 5;
+      transition: fill 0.3s linear;
+
+      svg path {
+        transition: 0.3s linear;
+        &:hover {
+          fill: #ffffff;
+        }
+      }
+
+      &::before {
+        content: "";
+        width: 80px;
+        height: 40px;
+        position: absolute;
+        top: -50%;
+        left: -100%;
+        z-index: -1;
+        background: rgba(157, 81, 255, 0.6);
+        filter: blur(50px);
+        backface-visibility: hidden; //for fixing blur blinking
+      }
+    }
+  }
+}

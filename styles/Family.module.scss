@@ -1,0 +1,94 @@
+.family {
+  text-align: left;
+  padding: 57px 0 90px;
+  margin-bottom: 24px;
+  position: relative;
+
+  @media (min-width: 769px) {
+    padding: 180px 0;
+    margin-bottom: 120px;
+  }
+
+  .animation {
+    position: absolute;
+    min-width: 256px;
+    left: auto;
+    right: 50%;
+    top: 0;
+
+    @media (min-width: 769px) {
+      right: auto;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .family_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 30px;
+
+    position: relative;
+    z-index: 5;
+
+    @media (min-width: 769px) {
+      flex-direction: row;
+      column-gap: 80px;
+    }
+
+    @media (min-width: 1401px) {
+      padding-right: 237px;
+      justify-content: flex-end;
+    }
+
+    h3 {
+      font-family: Arboria, sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 32px;
+      max-width: 161px;
+      position: relative;
+
+      @media (min-width: 769px) {
+        text-align: left;
+        font-size: 55px;
+        max-width: 245px;
+      }
+
+      &::before {
+        content: "";
+        width: 11em;
+        height: 7.2em;
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        transform: translate(-50%,-50%);
+        z-index: -1;
+        /*background: rgba(80, 79, 82, 0.3);*/
+        background: radial-gradient(ellipse, rgba(80, 79, 82, 0.6) 0, rgba(80, 79, 82, 0) 70%);
+        filter: blur(50px);
+        backface-visibility: hidden; //for fixing blur blinking
+      }
+    }
+
+    p {
+      margin-bottom: 19px;
+      text-align: justify;
+      max-width: 290px;
+      @media (min-width: 769px) {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .button {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
